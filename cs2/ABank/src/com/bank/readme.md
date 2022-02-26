@@ -54,21 +54,22 @@ the withdrawal amount, or alert if above the limit.
 - **Interface** files. Not linked to any file
 
 #### Terminals run and shown:
-```
-    run:
-    bac1/BankAcc/ Bank Balance: 1000.0
+``` console
+  antw@Mac-mini ABank % cd src
+  antw@Mac-mini src % javac -d ../build/classes com/bank/ABank.java 
+  antw@Mac-mini src % cd ../build/classes
+  antw@Mac-mini classes % java com.bank.ABank
+  bac1/BankAcc/ Bank Balance: 1000.0
 
-    Deposit : 200.0
-    bac1/BankAcc/ Bank Balance: 1200.0
+  Deposit : 200.0
+  bac1/BankAcc/ Bank Balance: 1200.0
 
-    Withdrawal 300.0
-    bac1/BankAcc/ Bank Balance: 900.0
+  Withdrawal 300.0
+  bac1/BankAcc/ Bank Balance: 900.0
 
-    Withdrawal 1300.0
-    Unable to withdraw above Withdrawal Limit!
-    bac1/BankAcc/ Bank Balance: 900.0
-
-    BUILD SUCCESSFUL (total time: 0 seconds)
+  Withdrawal 1300.0
+  Unable to withdraw above Withdrawal Limit!
+  bac1/BankAcc/ Bank Balance: 900.0
 ```
 
 ### Issues yet to resolve

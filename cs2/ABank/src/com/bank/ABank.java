@@ -1,6 +1,10 @@
-/*
-
+/* main: ABank.java
+ * CustAcc.java: Customer: Name, AccCount No, account type, account balance
+ * BankAcc.java: deposit, withdraw, transfer, balance, bank Minimum, withdrawLimit
+ * Saving Account, ATM facility, Accumulate interest  // KIV
+ * Current Account, Cheque facility ,No compount interest  // KIV
  */
+
 package com.bank;
 
 public class ABank {
