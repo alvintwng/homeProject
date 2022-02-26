@@ -1,0 +1,158 @@
+
+* [ABank.java](#aBankjava)
+* [FileExplore2.java](#fileExplore2java)
+
+---
+ABank.java
+===
+ABank.java companied files:
+* CustAcc.java
+* BankAcc.java
+* CustomerInfo.java
+* PDPAinterface.java
+
+Description
+---
+Using Java OOPs, (Object-Oriented Programming) technique to demonstrate transfered of data from different files.
+
+Concept of State and Behaviour ideas:
+```
+        Account [Parent] state + behaviour (Main object)
+        State:
+          - cash handling
+          - foreign currency handling
+        behaviour:
+          - fund deposit
+          - fund withdraw
+          - fund transfer
+          - Check balance
+
+        Accounts [children] state & behaviour (sub Objects)
+          - Saving Account
+            - minimum balance
+            - ATM facility
+            - Accumulate interest
+          - Current Account
+            - Minimum balance
+            - Cheque facility
+            - No compount interest 
+
+        Customer
+            - Name
+            - AccCount No
+```
+
+### Design Aspect
+#### CustAcc.java
+State of Customer information, Customer Name, AccCount No, account type, account balance.  
+This file will performance bank withdrawal, check on bank balance.
+
+#### BankAcc.java
+Bank code for variable for deposit, withdraw, transfer, balance, bank Minimum, withdrawLimit.  
+This file contain business logic for checking withdraw limit, `withDrawing`, and print out 
+the withdrawal amount, or alert if above the limit.
+
+#### CustomerInfo.java
+- **Emun** on Customer infomarion. Not linked to main yet.
+
+#### PDPAinterface.java
+- **Interface** files. Not linked to any file
+
+#### Terminals run and shown:
+```
+    run:
+    bac1/BankAcc/ Bank Balance: 1000.0
+
+    Deposit : 200.0
+    bac1/BankAcc/ Bank Balance: 1200.0
+
+    Withdrawal 300.0
+    bac1/BankAcc/ Bank Balance: 900.0
+
+    Withdrawal 1300.0
+    Unable to withdraw above Withdrawal Limit!
+    bac1/BankAcc/ Bank Balance: 900.0
+
+    BUILD SUCCESSFUL (total time: 0 seconds)
+```
+
+---
+FileExplore2.java
+---
+FileExplore2.java companies files:
+* FileMkdir.java
+* FileRW.java
+* FileBRW.java
+* FileIOS.java
+* FileBufferIOS.java
+
+### Description
+To demonstrate the java class file operation, using java.io Class File. 
+Code executed `FileExplore2.java` via console screen. 
+Shown display of menu for items selection.
+
+### Design Aspect
+#### FileExplore2.java
+This is `Main` file, using `switch case` pointing to other object files to execute other operation.  
+Run User Interface on console to display the menu.  
+using ArrayList for rescusively print the directories.
+
+On terminal to execute:   
+`% javac -d build/classes src/file/exp/*.java `  
+`% cd build/classes`   
+`% java file.exp.FileExplore2 /Users/antw/homeProject/cs2/FileExplore2/TestFolder`   
+
+#### FileMkdir.java
+Using java `mkdirs()`, to create new directory on `TestFolder`.
+#### FileRW.java
+Using java `FileWriter` and `FileReader` to create new file, add text, and read file.
+#### FileBRW.java
+Using java `BufferedWriter`, `BufferedReader`, `FileWriter` and `FileReader` to create new file, add text, and read file.
+#### FileIOS.java
+Using java `FileInputStream` and `FileOutputStream` to create new file, add text, and read file.
+#### FileBufferIOS.java
+Using java `BufferedInputStream`,`BufferedOutputStream`,`FileInputStream` and `FileOutputStream` to create new file, add text, and read file.
+### Terminals run and shown:
+```
+ ********************************************************************************************* 
+
+	 *** Demonstrate of java.io. Class File *** 
+
+	Root Directory for File Operations ::: /Users/antw/homeProject/cs2/FileExplore2/TestFolder
+ 	                                       ---------------------------------------
+
+ ********************************************************************************************* 
+ 	Following are the options :: 
+ 
+		0 >> Directory Listing
+ 
+		1 >> Create Directory 
+ 
+		31 >> Create File thru FileWriter & FileReader
+ 
+		32 >> Create File thru BufferedWriter & BufferReader
+ 
+		33 >> Create File thru FileInputStream & FileOutputStream
+ 
+		34 >> Create File thru BufferedInputStream & BufferedOutputStream
+ 
+		99 >> Exit 
+
+ ********************************************************************************************* 
+ Enter a numer to carry out the operation  :   0
+ ============================================================================================
+		 Option Selected : 		Directory Listing
+[
+  |------ >> test1501.txt, 
+  |------ >> .DS_Store, 
+  |------ >> Level1, 
+  |--------- >> .DS_Store, 
+  |--------- >> Level2, 
+  |------------ >> Sammple.txt]
+ ============================================================================================
+ Press any key to continue.....
+```
+
+
+
+---
